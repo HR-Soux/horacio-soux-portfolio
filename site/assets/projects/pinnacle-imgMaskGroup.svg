@@ -1,0 +1,25 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="210.459" height="437.661" viewBox="0 0 210.459 437.661" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Mask group">
+<mask id="mask0_0_95" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="209" height="438">
+<g id="Vector">
+<path d="M3.36542e-05 0.761493H7.99211V437.661H3.36542e-05V0.761493Z" fill="black"/>
+<path d="M15.6036 3.04494H23.2151V435.378H15.6036V3.04494Z" fill="black"/>
+<path d="M30.8266 4.94782H38.4381V433.475H30.8266V4.94782Z" fill="black"/>
+<path d="M46.4302 7.23126H54.0417V431.192H46.4302V7.23126Z" fill="black"/>
+<path d="M61.6532 9.89529H69.2647V428.528H61.6532V9.89529Z" fill="black"/>
+<path d="M77.2567 11.7982H85.2488V426.625H77.2567V11.7982Z" fill="black"/>
+<path d="M92.4797 14.0816H100.472V424.341H92.4797V14.0816Z" fill="black"/>
+<path d="M122.926 11.7982H130.918V426.625H122.926V11.7982Z" fill="black"/>
+<path d="M107.703 14.0816H115.695V424.341H107.703V14.0816Z" fill="black"/>
+<path d="M138.91 9.89529H146.521V428.528H138.91V9.89529Z" fill="black"/>
+<path d="M154.133 7.23126H161.744V431.192H154.133V7.23126Z" fill="black"/>
+<path d="M169.736 4.94782H177.348V433.475H169.736V4.94782Z" fill="black"/>
+<path d="M184.959 3.04494H192.571V435.378H184.959V3.04494Z" fill="black"/>
+<path d="M200.182 0.761493H208.174V437.661H200.182V0.761493Z" fill="black"/>
+</g>
+</mask>
+<g mask="url(#mask0_0_95)">
+<path id="Rectangle 1383" d="M2.28451 0C69.8928 22.2477 142.851 22.2477 210.459 0V436.9C142.851 414.652 69.8928 414.652 2.28451 436.9V0Z" fill="black"/>
+</g>
+</g>
+</svg>

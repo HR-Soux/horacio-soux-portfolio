@@ -1,0 +1,13 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="2705.5" height="720.654" viewBox="0 0 2705.5 720.654" fill="none" xmlns="http://www.w3.org/2000/svg">
+<foreignObject x="0" y="0" width="2705.5" height="720.654"><div xmlns="http://www.w3.org/1999/xhtml" style="backdrop-filter:blur(33.09px);clip-path:url(#bgblur_0_0_15_clip_path);height:100%;width:100%"></div></foreignObject><g id="Ellipse 21" filter="url(#filter0_f_0_15)" data-figma-bg-blur-radius="66.1715">
+<ellipse cx="1352.75" cy="360.327" rx="1263.53" ry="271.106" fill="white" fill-opacity="0.01"/>
+</g>
+<defs>
+<filter id="filter0_f_0_15" x="0" y="0" width="2705.5" height="720.654" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="44.6102" result="effect1_foregroundBlur_0_15"/>
+</filter>
+<clipPath id="bgblur_0_0_15_clip_path" transform="translate(0 0)"><ellipse cx="1352.75" cy="360.327" rx="1263.53" ry="271.106"/>
+</clipPath></defs>
+</svg>

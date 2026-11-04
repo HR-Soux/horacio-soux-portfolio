@@ -1,0 +1,8 @@
+* text=auto
+*.glb binary
+*.mp4 binary
+*.png binary
+*.webp binary
+*.jpg binary
+*.ttf binary
+*.otf binary

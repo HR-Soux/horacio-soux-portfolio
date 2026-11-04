@@ -1,0 +1,11 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Grid / Diagonales y c&#195;&#173;rculo" opacity="0.11" clip-path="url(#clip0_0_7)">
+<path id="Vector" d="M0 0L746.667 420M746.667 420L960 540M746.667 420V0M746.667 420V540M960 540L1173.33 660M960 540L1173.33 420M960 540L746.667 660M960 540H746.667M960 540H1173.33M960 540V0M960 540V1080M1173.33 660L1920 1080M1173.33 660V540M1173.33 660V1080M1920 0L1173.33 420M1173.33 420V0M1173.33 420V540M746.667 660L0 1080M746.667 660V540M746.667 660V1080M0 540H746.667M1173.33 540H1920" stroke-width="0.639602" stroke="#E9E6D0" stroke-opacity="0.33"/>
+<path id="Vector_2" d="M1386.67 540C1386.67 756.897 1195.64 932.727 959.999 932.727C724.357 932.727 533.332 756.897 533.332 540C533.332 323.102 724.357 147.272 959.999 147.272C1195.64 147.272 1386.67 323.102 1386.67 540Z" stroke-width="0.639602" stroke="#E9E6D0" stroke-opacity="0.33"/>
+</g>
+<defs>
+<clipPath id="clip0_0_7">
+<rect width="1920" height="1080" fill="white"/>
+</clipPath>
+</defs>
+</svg>
