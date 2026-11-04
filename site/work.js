@@ -1,3 +1,4 @@
+import {assetPath} from './asset-paths.js';
 import {createProjects} from './projects.js';
 export function createWork({reduced,schedule}){
  const details=createProjects(schedule);
@@ -14,8 +15,8 @@ export function createWork({reduced,schedule}){
  let active=false,target=1,position=1,opener=null,drag=null,lastName=-1,request=0;
  const mod=n=>((n%6)+6)%6;
  let preload;
- function load(){return preload??=Promise.all(['firmament-dark',...projects.map(p=>p[1])].map(name=>{const i=new Image();i.src=`assets/work/${name}.png`;return i.decode();}));}
- function draw(){const size=Math.min(innerWidth*.25,innerHeight*.49,520),mobile=innerWidth<700,w=mobile?Math.min(innerWidth*.62,innerHeight*.42):size;gallery.style.setProperty('--cover-size',`${w}px`);const base=Math.floor(position);cards.forEach((card,k)=>{const slot=base+k-4,d=slot-position,a=Math.abs(d),i=mod(slot);if(card.dataset.project!==String(i)){card.dataset.project=i;card.querySelector('img').src=`assets/work/${projects[i][1]}.png`;card.setAttribute('aria-label',projects[i][0]);}card.dataset.slot=slot;card.tabIndex=a<.5?0:-1;const x=d*w*.57,z=-Math.min(a,1)*w*.30-Math.max(0,a-1)*w*.18,angle=-Math.sign(d)*Math.min(a,1)*54;card.style.transform=`translate(-50%,-50%) translate3d(${x}px,0,${z}px) rotateY(${angle}deg)`;card.style.opacity=Math.max(0,Math.min(1,(4.25-a)*2));card.style.filter=`brightness(${Math.max(.35,1-a*.19)})`;card.style.zIndex=100-Math.round(a*10);card.style.pointerEvents=a<3.5?'auto':'none';});const i=mod(Math.round(position));if(i!==lastName){lastName=i;caption.querySelector('strong').textContent=projects[i][0];caption.querySelector('span').textContent='';}}
+ function load(){return preload??=Promise.all(['firmament-dark',...projects.map(p=>p[1])].map(name=>{const i=new Image();i.src=assetPath(`assets/work/${name}.png`);return i.decode();}));}
+ function draw(){const size=Math.min(innerWidth*.25,innerHeight*.49,520),mobile=innerWidth<700,w=mobile?Math.min(innerWidth*.62,innerHeight*.42):size;gallery.style.setProperty('--cover-size',`${w}px`);const base=Math.floor(position);cards.forEach((card,k)=>{const slot=base+k-4,d=slot-position,a=Math.abs(d),i=mod(slot);if(card.dataset.project!==String(i)){card.dataset.project=i;card.querySelector('img').src=assetPath(`assets/work/${projects[i][1]}.png`);card.setAttribute('aria-label',projects[i][0]);}card.dataset.slot=slot;card.tabIndex=a<.5?0:-1;const x=d*w*.57,z=-Math.min(a,1)*w*.30-Math.max(0,a-1)*w*.18,angle=-Math.sign(d)*Math.min(a,1)*54;card.style.transform=`translate(-50%,-50%) translate3d(${x}px,0,${z}px) rotateY(${angle}deg)`;card.style.opacity=Math.max(0,Math.min(1,(4.25-a)*2));card.style.filter=`brightness(${Math.max(.35,1-a*.19)})`;card.style.zIndex=100-Math.round(a*10);card.style.pointerEvents=a<3.5?'auto':'none';});const i=mod(Math.round(position));if(i!==lastName){lastName=i;caption.querySelector('strong').textContent=projects[i][0];caption.querySelector('span').textContent='';}}
  async function open(button){
  const token=++request;opener=button;button?.setAttribute('aria-busy','true');
  try{await load();}catch{button?.removeAttribute('aria-busy');return;}

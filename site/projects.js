@@ -1,3 +1,4 @@
+import {assetPath} from './asset-paths.js';
 import {techla} from './techla.js';
 import {pinnacle,casa,coloso} from './case-studies.js';
 import {mountStudy} from './study-interactions.js';
@@ -6,7 +7,7 @@ export function createProjects(schedule){
  layer.innerHTML='<div class="project-dimmer"></div><section class="project-modal" role="dialog" aria-label="Project details" tabindex="-1"><button class="project-close" aria-label="Close project">×</button><article></article></section>';
  document.body.append(layer);
  const modal=layer.querySelector('section'),article=layer.querySelector('article');let opener,unmountStudy=()=>{};
- const image=(p,n,cls='',alt='')=>`<img class="${cls}" src="assets/projects/${p}-${n}.${n.startsWith('imgVector')||n.startsWith('imgEllipse')?'svg':'png'}" alt="${alt}" loading="lazy">`;
+ const image=(p,n,cls='',alt='')=>`<img class="${cls}" src="${assetPath(`assets/projects/${p}-${n}.${n.startsWith('imgVector')||n.startsWith('imgEllipse')?'svg':'png'}`)}" alt="${alt}" loading="lazy">`;
  const text=(title,body)=>`<section class="project-copy"><h3>${title}</h3><p>${body}</p></section>`;
  const gallery=(p,names)=>`<section class="project-views"><h3>Some views</h3><div class="project-strip" tabindex="0" aria-label="Project artwork, scroll horizontally">${names.map((n,i)=>image(p,n,'',`${p} — artwork ${i+1}`)).join('')}</div></section>`;
  const footer='<footer class="project-footer">Want to know more? <button class="project-contact">Let’s talk.</button></footer>';

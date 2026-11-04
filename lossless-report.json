@@ -1,0 +1,231 @@
+{
+  "initial": 226676143,
+  "final": 176108644,
+  "saved": 50567499,
+  "percent": "22.31",
+  "converted": 37,
+  "images": [
+    {
+      "file": "assets/background-integrated.png",
+      "before": 41266070,
+      "after": 22408094,
+      "pixelsIdentical": true
+    },
+    {
+      "file": "assets/experience/night.png",
+      "before": 2816926,
+      "after": 2026362,
+      "pixelsIdentical": true
+    },
+    {
+      "file": "assets/projects/eden-imgBackgroundMeet03B1.png",
+      "before": 3067915,
+      "after": 2128508,
+      "pixelsIdentical": true
+    },
+    {
+      "file": "assets/projects/eden-imgBackgroundMeet041.png",
+      "before": 2849307,
+      "after": 1710862,
+      "pixelsIdentical": true
+    },
+    {
+      "file": "assets/projects/eden-imgDipticoView021.png",
+      "before": 6770311,
+      "after": 4550042,
+      "pixelsIdentical": true
+    },
+    {
+      "file": "assets/projects/eden-imgEdenAgo011.png",
+      "before": 1995940,
+      "after": 1480964,
+      "pixelsIdentical": true
+    },
+    {
+      "file": "assets/projects/eden-imgEdenAgo041.png",
+      "before": 741023,
+      "after": 480338,
+      "pixelsIdentical": true
+    },
+    {
+      "file": "assets/projects/eden-imgEdenAgo131.png",
+      "before": 1831316,
+      "after": 1126028,
+      "pixelsIdentical": true
+    },
+    {
+      "file": "assets/projects/eden-imgEdenLinkedInEne041.png",
+      "before": 666087,
+      "after": 341004,
+      "pixelsIdentical": true
+    },
+    {
+      "file": "assets/projects/eden-imgEdenSep021.png",
+      "before": 1994333,
+      "after": 1159190,
+      "pixelsIdentical": true
+    },
+    {
+      "file": "assets/projects/eden-imgFrame470668.png",
+      "before": 180680,
+      "after": 106186,
+      "pixelsIdentical": true
+    },
+    {
+      "file": "assets/projects/eden-imgImage1305.png",
+      "before": 4059792,
+      "after": 2392712,
+      "pixelsIdentical": true
+    },
+    {
+      "file": "assets/projects/eden-imgImage883.png",
+      "before": 4664278,
+      "after": 2523296,
+      "pixelsIdentical": true
+    },
+    {
+      "file": "assets/projects/eden-imgQxcansyp04A9Qtnkfo2J01.png",
+      "before": 6090993,
+      "after": 3974534,
+      "pixelsIdentical": true
+    },
+    {
+      "file": "assets/projects/eden-imgScreenshot20261007At85540Pm1.png",
+      "before": 1628380,
+      "after": 681926,
+      "pixelsIdentical": true
+    },
+    {
+      "file": "assets/projects/optimal-imgFrame4706491.png",
+      "before": 3145247,
+      "after": 1987438,
+      "pixelsIdentical": true
+    },
+    {
+      "file": "assets/projects/optimal-imgFrame4713191.png",
+      "before": 2425623,
+      "after": 1584116,
+      "pixelsIdentical": true
+    },
+    {
+      "file": "assets/projects/optimal-imgOmni66996F7CA74B45C4Ab5147A569C202731.png",
+      "before": 5409750,
+      "after": 4223120,
+      "pixelsIdentical": true
+    },
+    {
+      "file": "assets/projects/optimal-imgOptimalLinkedInPaper011.png",
+      "before": 1032942,
+      "after": 611664,
+      "pixelsIdentical": true
+    },
+    {
+      "file": "assets/projects/optimal-imgOptimalLinkedInPaper0111.png",
+      "before": 1621666,
+      "after": 1081096,
+      "pixelsIdentical": true
+    },
+    {
+      "file": "assets/projects/optimal-imgOptimalLinkedInPaper0121.png",
+      "before": 1424839,
+      "after": 900452,
+      "pixelsIdentical": true
+    },
+    {
+      "file": "assets/projects/optimal-imgOptimalLinkedInPostMay01A21.png",
+      "before": 6711826,
+      "after": 4718328,
+      "pixelsIdentical": true
+    },
+    {
+      "file": "assets/projects/optimal-imgOptimalLinkedInPostMay04C21.png",
+      "before": 1385179,
+      "after": 894840,
+      "pixelsIdentical": true
+    },
+    {
+      "file": "assets/projects/optimal-imgOptimalLinkedInPostMay061.png",
+      "before": 4235758,
+      "after": 2761834,
+      "pixelsIdentical": true
+    },
+    {
+      "file": "assets/projects/optimal-imgOptimalReclutamiento051.png",
+      "before": 1232741,
+      "after": 760498,
+      "pixelsIdentical": true
+    },
+    {
+      "file": "assets/projects/optimal-imgOptimalSttc021.png",
+      "before": 1808818,
+      "after": 1192314,
+      "pixelsIdentical": true
+    },
+    {
+      "file": "assets/projects/optimal-imgOptimalSttc031.png",
+      "before": 712552,
+      "after": 450246,
+      "pixelsIdentical": true
+    },
+    {
+      "file": "assets/projects/techla-1242-4630-imgChatGptImageOct312026103426Pm1.png",
+      "before": 158659,
+      "after": 77694,
+      "pixelsIdentical": true
+    },
+    {
+      "file": "assets/skills/night.png",
+      "before": 2816926,
+      "after": 2026362,
+      "pixelsIdentical": true
+    },
+    {
+      "file": "assets/work/casa.png",
+      "before": 1886929,
+      "after": 1239640,
+      "pixelsIdentical": true
+    },
+    {
+      "file": "assets/work/coloso.png",
+      "before": 2143326,
+      "after": 1415516,
+      "pixelsIdentical": true
+    },
+    {
+      "file": "assets/work/eden.png",
+      "before": 686385,
+      "after": 393054,
+      "pixelsIdentical": true
+    },
+    {
+      "file": "assets/work/firmament-dark.png",
+      "before": 3114580,
+      "after": 1506156,
+      "pixelsIdentical": true
+    },
+    {
+      "file": "assets/work/firmament.png",
+      "before": 3264806,
+      "after": 1569236,
+      "pixelsIdentical": true
+    },
+    {
+      "file": "assets/work/optimal.png",
+      "before": 1613016,
+      "after": 1067672,
+      "pixelsIdentical": true
+    },
+    {
+      "file": "assets/work/pinnacle.png",
+      "before": 522968,
+      "after": 297974,
+      "pixelsIdentical": true
+    },
+    {
+      "file": "assets/work/techla.png",
+      "before": 1251980,
+      "after": 809134,
+      "pixelsIdentical": true
+    }
+  ]
+}

@@ -84,3 +84,7 @@ Puedes añadirlo más adelante en **Settings → Pages → Custom domain**, desp
 Documentación oficial: https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages
 
 Este paquete está preparado localmente. No crea un repositorio remoto ni publica la web por sí solo hasta que completes los pasos de GitHub.
+
+## Optimización sin pérdida
+
+Esta versión reduce el sitio de 226,7 MB a 176,1 MB (22,3%). Se convirtieron 37 PNG a WebP lossless, comparando todos los píxeles RGBA decodificados antes de aceptar cada conversión. Se conservaron dimensiones, modelos 3D, videos y fuentes. Consulta `lossless-report.json`. El tamaño total no equivale a la descarga inicial; el ahorro depende de los proyectos visitados.

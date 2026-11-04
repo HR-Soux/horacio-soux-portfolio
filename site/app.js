@@ -55,7 +55,7 @@ try{
  renderer=new THREE.WebGLRenderer({alpha:true,antialias:true,powerPreference:'high-performance'});renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.NoToneMapping;document.querySelector('#scene').appendChild(renderer.domElement);
  camera=new THREE.PerspectiveCamera(25,innerWidth/innerHeight,.1,100);camera.position.set(0,0,6.45);resize();
  const charactersReady=createCharacters(scene);
- const texture=await new THREE.TextureLoader().loadAsync((new URLSearchParams(location.search).has('original')?'./assets/background-integrated.png':innerWidth<=900?'./assets/background-mobile.webp':'./assets/background-desktop.webp'));
+ const texture=await new THREE.TextureLoader().loadAsync((new URLSearchParams(location.search).has('original')?'./assets/background-integrated.lossless.webp':innerWidth<=900?'./assets/background-mobile.webp':'./assets/background-desktop.webp'));
  // User-supplied full-resolution painting, with the sky already integrated.
  texture.colorSpace=THREE.SRGBColorSpace;
  texture.anisotropy=renderer.capabilities.getMaxAnisotropy();

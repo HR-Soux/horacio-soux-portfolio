@@ -1,4 +1,5 @@
-const asset=(group,name,ext='png')=>`assets/projects/techla-${group}-${name}.${ext}`;
+import {assetPath} from './asset-paths.js';
+const asset=(group,name,ext='png')=>assetPath(`assets/projects/techla-${group}-${name}.${ext}`);
 const img=(group,name,alt='',ext='png',cls='')=>`<img class="${cls}" src="${asset(group,name,ext)}" alt="${alt}" loading="lazy">`;
 export function techla(footer){return `<div class="techla-case">
  <div class="techla-hero">

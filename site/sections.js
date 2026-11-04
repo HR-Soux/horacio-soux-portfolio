@@ -11,7 +11,7 @@ export function createSections({showInfo, schedule, reduced}) {
  document.body.append(root);
  const skills=createSkills(root,reduced);
  const status=document.createElement('p');status.className='section-status';status.setAttribute('role','status');document.body.append(status);
- const night=new Image();night.src='assets/experience/night.png';const ready=night.decode();ready.catch(()=>{});
+ const night=new Image();night.src='assets/experience/night.lossless.webp';const ready=night.decode();ready.catch(()=>{});
  let active=false,request=0,opener=null;
  const hoverPointer=matchMedia('(hover: hover) and (pointer: fine)');
  let px=0,py=0;
