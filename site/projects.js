@@ -1,6 +1,6 @@
 import {assetPath} from './asset-paths.js';
 import {techla} from './techla.js';
-import {pinnacle,casa,coloso} from './case-studies.js';
+import {pinnacle,casa,coloso} from './case-studies.js?v=pinnacle-en-2';
 import {mountStudy} from './study-interactions.js';
 export function createProjects(schedule){
  const layer=document.createElement('div');layer.className='project-layer';layer.hidden=true;
