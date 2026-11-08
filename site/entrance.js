@@ -1,7 +1,7 @@
 // A real loading gate followed by an organic luminous reveal.
 export function createEntrance(){
  const canvas=document.createElement('canvas');canvas.id='entrance';document.body.append(canvas);
- const label=document.createElement('div');label.id='loading-label';label.setAttribute('role','status');label.innerHTML='<span>The<br>H.R. Soux<br>Design studio</span><small>:cargando</small>';document.body.append(label);
+ const label=document.createElement('div');label.id='loading-label';label.setAttribute('role','status');label.innerHTML='<span>The<br>H.R. Soux<br>Design studio</span><small aria-label="cargando"><span aria-hidden="true">cargando<i>.</i><i>.</i><i>.</i></span></small>';document.body.append(label);
  const ctx=canvas.getContext('2d');let began=null;
  function resize(){canvas.width=innerWidth*devicePixelRatio;canvas.height=innerHeight*devicePixelRatio;ctx.setTransform(devicePixelRatio,0,0,devicePixelRatio,0,0)}resize();window.addEventListener('resize',resize);
  document.body.classList.add('loading');
@@ -21,5 +21,5 @@ export function createEntrance(){
   if(p===1){canvas.hidden=true;label.hidden=true;document.body.classList.remove('loading');}
   return reduced?p:Math.max(0,Math.min(1,(t-.7)/2.2));
  }
- return {draw,ready(){began=performance.now();label.querySelector('small').textContent='';document.body.classList.add('entering');},replay(){canvas.hidden=false;label.hidden=false;label.style.opacity='1';document.body.classList.add('loading');document.body.classList.remove('entering');void label.offsetWidth;this.ready();},fail(){label.querySelector('small').textContent='The scene could not load. Reload to try again.';document.body.classList.add('load-error');}};
+ return {draw,ready(){if(began!==null)return;began=performance.now();label.querySelector('small').textContent='';document.body.classList.add('entering');},replay(){canvas.hidden=false;label.hidden=false;label.style.opacity='1';document.body.classList.add('loading');document.body.classList.remove('entering');void label.offsetWidth;began=null;this.ready();},fail(){label.querySelector('small').textContent='The scene could not load. Reload to try again.';document.body.classList.add('load-error');}};
 }

@@ -1,5 +1,5 @@
-import {createSections} from './sections.js?v=20261108b';
-import {createEntrance} from './entrance.js?v=20261108b';
+import {createSections} from './sections.js?v=20261108c';
+import {createEntrance} from './entrance.js?v=20261108c';
 import {createCharacters} from './rigged-characters.js';
 import * as THREE from 'three';
 
@@ -51,11 +51,19 @@ function frameBackground(){
 }
 function resize(){dust.width=innerWidth;dust.height=innerHeight;if(renderer){renderer.setSize(innerWidth,innerHeight);camera.aspect=innerWidth/innerHeight;camera.fov=innerWidth<900?39:25;camera.updateProjectionMatrix();frameBackground()}}
 entrance.draw(performance.now());
-try{
+// The interface must remain available while large 3D assets load.
+const sceneHost=document.querySelector('#scene');
+const painting=new URLSearchParams(location.search).has('original')?'./assets/background-integrated.lossless.webp':innerWidth<=900?'./assets/background-mobile.webp':'./assets/background-desktop.webp';
+sceneHost.style.backgroundImage=`url("${painting}")`;sceneHost.style.backgroundSize='cover';sceneHost.style.backgroundPosition='center';
+const releaseEntrance=()=>{document.querySelector('#scene').classList.add('ready');entrance.ready();};
+const loadingDeadline=setTimeout(releaseEntrance,8000);
+let charactersAppeared=null;
+async function initializeScene(){try{
  renderer=new THREE.WebGLRenderer({alpha:true,antialias:true,powerPreference:'high-performance'});renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.NoToneMapping;document.querySelector('#scene').appendChild(renderer.domElement);
  camera=new THREE.PerspectiveCamera(25,innerWidth/innerHeight,.1,100);camera.position.set(0,0,6.45);resize();
- const charactersReady=createCharacters(scene);
- const texture=await new THREE.TextureLoader().loadAsync((new URLSearchParams(location.search).has('original')?'./assets/background-integrated.lossless.webp':innerWidth<=900?'./assets/background-mobile.webp':'./assets/background-desktop.webp'));
+ model=new THREE.Group();scene.add(model);
+ createCharacters(scene).then(update=>{updateCustom=update;charactersAppeared=performance.now();updateCustom(0,0,0);}).catch(error=>console.error('Characters could not load; navigation remains available',error));
+ const texture=await new THREE.TextureLoader().loadAsync(painting);
  // User-supplied full-resolution painting, with the sky already integrated.
  texture.colorSpace=THREE.SRGBColorSpace;
  texture.anisotropy=renderer.capabilities.getMaxAnisotropy();
@@ -64,13 +72,11 @@ try{
  const skyMaterial=new THREE.MeshBasicMaterial({map:texture,side:THREE.DoubleSide});
  bg=new THREE.Mesh(new THREE.PlaneGeometry(42,42*texture.image.height/texture.image.width),skyMaterial);
  bg.position.z=-25.46;scene.add(bg);frameBackground();
- model=new THREE.Group();scene.add(model);
- updateCustom=await charactersReady;updateCustom(0,0,0);
- await document.fonts.ready;
- await renderer.compileAsync(scene,camera);
+
  renderer.render(scene,camera);
- start=performance.now();document.querySelector('#scene').classList.add('ready');entrance.ready();
-}catch(error){entrance.fail();console.error('Scene loading failed',error)}
+ start=performance.now();clearTimeout(loadingDeadline);releaseEntrance();
+}catch(error){clearTimeout(loadingDeadline);releaseEntrance();console.error('3D scene unavailable; showing the painting fallback',error)}}
+initializeScene();
 window.addEventListener('resize',resize);resize();document.querySelector('#replay').onclick=()=>{if(sections.replay())return;start=performance.now();scroll=0;targetScroll=0;elapsed=0;entrance.replay();paused=false;motionLabel();const frame=document.querySelector('.frame');frame.style.animation='none';requestAnimationFrame(()=>frame.style.animation='')};
 function tick(now){requestAnimationFrame(tick);let dt=Math.min((now-last)/1000,.05);last=now;if(!paused)elapsed+=dt;
  sections.update(pointer.x,pointer.y,dt,paused);
@@ -78,7 +84,7 @@ function tick(now){requestAnimationFrame(tick);let dt=Math.min((now-last)/1000,.
  if(!paused)scroll+=(targetScroll-scroll)*(1-Math.exp(-dt*7));
  ctx.clearRect(0,0,dust.width,dust.height);for(const p of particles){const y=(p.y+elapsed*.004)%1;ctx.fillStyle=`rgba(255,235,163,${(.25+.22*Math.sin(elapsed+p.p))})`;ctx.beginPath();ctx.arc(p.x*dust.width+Math.sin(elapsed*.3+p.p)*10,y*dust.height,p.r,0,Math.PI*2);ctx.fill()}
  if(renderer&&model){if(!paused){smooth.x+=(pointer.x-smooth.x)*.035;smooth.y+=(pointer.y-smooth.y)*.035;camera.position.z=6.45+(1-ease)*1.1-scroll*.7;camera.position.x=smooth.x*.22;camera.position.y=-smooth.y*.08;camera.rotation.y=smooth.x*.014;camera.rotation.x=smooth.y*.007;}
- if(updateCustom)updateCustom(elapsed,scroll,ease);renderer.render(scene,camera);}
+ if(updateCustom)updateCustom(elapsed,scroll,Math.min(ease,Math.min(1,(now-charactersAppeared)/1200)));renderer.render(scene,camera);}
  const frame=document.querySelector('.frame');frame.style.transform=`translate(-50%,-50%) scale(${1-scroll*.06})`;
  document.body.dataset.scroll=scroll.toFixed(3);
 }requestAnimationFrame(tick);
