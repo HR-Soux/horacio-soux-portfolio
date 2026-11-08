@@ -1,4 +1,4 @@
-import {createWork} from './work.js?v=20261107e';
+import {createWork} from './work.js?v=20261108b';
 import {createSkills} from './skills.js';
 // Section content stays separate from the animated hero and its loading lifecycle.
 export function createSections({showInfo, schedule, reduced}) {
@@ -11,7 +11,7 @@ export function createSections({showInfo, schedule, reduced}) {
  document.body.append(root);
  const skills=createSkills(root,reduced);
  const status=document.createElement('p');status.className='section-status';status.setAttribute('role','status');document.body.append(status);
- const night=new Image();night.src='assets/experience/night.lossless.webp';const ready=night.decode();ready.catch(()=>{});
+ let ready;function loadNight(){if(!ready){const night=new Image();night.src='assets/experience/night.lossless.webp';ready=night.decode().catch(error=>{ready=null;throw error;});}return ready;}
  let active=false,request=0,opener=null;
  const hoverPointer=matchMedia('(hover: hover) and (pointer: fine)');
  let px=0,py=0;
@@ -25,7 +25,7 @@ export function createSections({showInfo, schedule, reduced}) {
  }
  function resize(){root.style.setProperty('--timeline-scale',innerWidth/1920);}resize();window.addEventListener('resize',resize);
  function close(){skills.reset();request++;active=false;document.body.classList.remove('experience-open');root.classList.remove('revealed');root.inert=true;root.setAttribute('aria-hidden','true');document.querySelector('main').inert=false;status.textContent='';opener?.focus();}
- async function open(button){const token=++request;opener=button;status.textContent='Preparing Experience…';try{await ready;}catch{status.textContent='Could not load Experience. Please try reloading the page.';return;}if(token!==request)return;active=true;skills.reset();status.textContent='';document.body.classList.add('experience-open');document.querySelector('main').inert=true;root.inert=false;root.setAttribute('aria-hidden','false');root.classList.add('revealed');root.querySelector('h2').focus({preventScroll:true});}
+ async function open(button){const token=++request;opener=button;status.textContent='Preparing Experience…';try{await loadNight();}catch{status.textContent='Could not load Experience. Please try reloading the page.';return;}if(token!==request)return;active=true;skills.reset();status.textContent='';document.body.classList.add('experience-open');document.querySelector('main').inert=true;root.inert=false;root.setAttribute('aria-hidden','false');root.classList.add('revealed');root.querySelector('h2').focus({preventScroll:true});}
  document.querySelector('#categories').addEventListener('click',e=>{const b=e.target.closest('[data-section]');if(!b)return;const index=Number(b.dataset.section);if(index===0){showInfo('Background', '');const p=document.querySelector('#dialog-copy');p.insertAdjacentHTML('afterend','<div class="background-details"><section><h3>Profile</h3><p>He combines creative direction, art direction, design, multimedia, and product thinking to build cohesive brand experiences. Connecting identity, audience, and purpose.</p></section><section><h3>Path</h3><p>His background spans branding, campaigns, multimedia, and advanced digital product design, allowing to balance strong aesthetics with strategy, usability, and clarity.</p></section><dl><div><dt>Location</dt><dd>Bolivia</dd></div><div><dt>Focus</dt><dd>Brand & communication</dd></div><div><dt>More</dt></div></dl></div>');}else if(index===1)open(b);else if(index===2)work.open(b);else showInfo(['Background','Experience','Work','Projects','Merch','Mag'][index],'Coming soon.');});
  root.querySelector('.experience-back').onclick=close;root.querySelector('#experience-next').onclick=()=>{const panel=root.querySelector('.skills-panel');root.scrollTo({top:panel.offsetTop,behavior:reduced.matches?'instant':'smooth'});};
  root.querySelector('#skills-contact').onclick=()=>schedule.showModal();

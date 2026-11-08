@@ -1,5 +1,5 @@
-import {createSections} from './sections.js?v=20261107e';
-import {createEntrance} from './entrance.js';
+import {createSections} from './sections.js?v=20261108b';
+import {createEntrance} from './entrance.js?v=20261108b';
 import {createCharacters} from './rigged-characters.js';
 import * as THREE from 'three';
 

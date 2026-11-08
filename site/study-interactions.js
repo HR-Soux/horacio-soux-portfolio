@@ -6,6 +6,10 @@ export function mountStudy(article){
   article.querySelectorAll('.casa-slide').forEach(box=>{box.firstElementChild.style.transform=`scale(${box.clientHeight/692.965})`;});
  };
  const observer=new ResizeObserver(resize);observer.observe(article);resize();
+ // Fetch only artwork approaching the modal viewport; preserve the original sources.
+ const media=new IntersectionObserver(entries=>{for(const entry of entries){if(!entry.isIntersecting)continue;const img=entry.target;img.loading='eager';img.src=img.dataset.src;delete img.dataset.src;media.unobserve(img);}},{root:article.closest('.project-modal'),rootMargin:'400px 200px'});
+ article.querySelectorAll('img[data-src]').forEach(img=>media.observe(img));
+ signal.addEventListener('abort',()=>media.disconnect(),{once:true});
  const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
  const animations=new Set(),frames=new Set();
  const textTargets=[...article.querySelectorAll('h2,h3,h4,p,.project-footer,.study-footer,.optimal-tagline,.project-year,.art-fit,.casa-slide,.pinnacle-preview,.eden-wordmark,.optimal-wordmark,.techla-logo,.pinnacle-hero>div>img')].filter(el=>!el.closest('.art-canvas,.casa-art')&&!el.parentElement.closest('p'));

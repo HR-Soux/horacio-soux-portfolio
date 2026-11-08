@@ -1,5 +1,5 @@
 import {assetPath} from './asset-paths.js';
-import {createProjects} from './projects.js?v=20261107e';
+import {createProjects} from './projects.js?v=20261108b';
 export function createWork({reduced,schedule}){
  const details=createProjects(schedule);
  const projects=[['Optimal','optimal'],['Eden','eden'],['PinnacleBox','pinnacle'],['Casa Obrador','casa'],['Techla','techla'],['Coloso','coloso']];
