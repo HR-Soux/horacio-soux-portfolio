@@ -1,4 +1,4 @@
-import {createWork} from './work.js';
+import {createWork} from './work.js?v=20261107e';
 import {createSkills} from './skills.js';
 // Section content stays separate from the animated hero and its loading lifecycle.
 export function createSections({showInfo, schedule, reduced}) {

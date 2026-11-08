@@ -1,0 +1,31 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="55.5251" height="26.0439" viewBox="0 0 55.5251 26.0439" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="Rectangle 66">
+<use xlink:href="#stroke0_0_35" fill="black"/>
+<use xlink:href="#stroke0_0_35" fill="url(#paint0_linear_0_35)"/>
+<use xlink:href="#stroke0_0_35" fill="url(#paint1_radial_0_35)"/>
+<mask id="stroke1_0_35" fill="white">
+<use xlink:href="#stroke0_0_35"/>
+</mask>
+<path d="M2.2007 26.0439H53.3244C54.5398 26.0439 55.5251 25.0586 55.5251 23.8432V2.20071C55.5251 0.98529 54.5398 0 53.3244 0H2.20071C0.98529 0 0 0.985287 0 2.2007V23.8432C0 25.0586 0.985288 26.0439 2.2007 26.0439Z" stroke-width="0.275088" stroke="url(#paint2_linear_0_35)" stroke-opacity="0.32" mask="url(#stroke1_0_35)"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_0_35" x1="1.49215" y1="2.35296" x2="23.2123" y2="21.1472" gradientUnits="userSpaceOnUse">
+<stop stop-color="#2A2A2A"/>
+<stop offset="0.341487" stop-color="#393939"/>
+<stop offset="0.509386" stop-color="#403F3F"/>
+<stop offset="1" stop-color="#292929"/>
+</linearGradient>
+<radialGradient id="paint1_radial_0_35" cx="0" cy="0" r="1" gradientTransform="matrix(-1.25849 15.1557 -10.8851 -1.77324 10.5883 10.8845)" gradientUnits="userSpaceOnUse">
+<stop stop-color="#1C1C1C"/>
+<stop offset="1"/>
+</radialGradient>
+<linearGradient id="paint2_linear_0_35" x1="12.3021" y1="-0.493259" x2="0.879326" y2="26.4679" gradientUnits="userSpaceOnUse">
+<stop offset="0.04" stop-color="#7A7A7A"/>
+<stop offset="0.125" stop-color="#3F3F3F"/>
+<stop offset="0.286115" stop-color="#212121"/>
+<stop offset="0.65" stop-color="#171616"/>
+<stop offset="1" stop-color="#737373"/>
+</linearGradient>
+<path id="stroke0_0_35" d="M0 2.2007C0 0.985287 0.98529 0 2.20071 0H53.3244C54.5398 0 55.5251 0.98529 55.5251 2.20071V23.8432C55.5251 25.0586 54.5398 26.0439 53.3244 26.0439H2.2007C0.985288 26.0439 0 25.0586 0 23.8432V2.2007Z"/>
+</defs>
+</svg>

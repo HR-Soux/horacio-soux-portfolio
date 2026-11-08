@@ -1,0 +1,26 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="189.11" height="119.534" viewBox="0 0 189.11 119.534" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="Rectangle 129" filter="url(#filter0_f_0_101)">
+<use xlink:href="#stroke0_0_101" fill="url(#paint0_linear_0_101)"/>
+<mask id="stroke1_0_101" maskUnits="userSpaceOnUse" x="1.34294" y="0.957452" width="187" height="118" fill="black">
+<rect fill="white" x="1.34294" y="0.957452" width="187" height="118"/>
+<use xlink:href="#stroke0_0_101"/>
+</mask>
+<path d="M27.0365 10.1007C38.9977 3.75702 53.326 3.75702 65.2871 10.1007L83.2696 19.6379C85.7065 20.9303 88.4229 21.6061 91.1813 21.6061H180.856C182.464 21.6061 183.767 22.9095 183.767 24.5174V111.256C183.767 112.877 182.453 114.191 180.832 114.191H8.2778C6.65693 114.191 5.34294 112.877 5.34294 111.256V46.1618C5.34294 31.0529 13.6887 17.1798 27.0365 10.1007Z" stroke-width="7.67578" stroke="url(#paint1_linear_0_101)" mask="url(#stroke1_0_101)"/>
+</g>
+<defs>
+<filter id="filter0_f_0_101" x="-1.19209e-07" y="0" width="189.11" height="119.534" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="0.752527" result="effect1_foregroundBlur_0_101"/>
+</filter>
+<linearGradient id="paint0_linear_0_101" x1="94.555" y1="-0.0425481" x2="183.767" y2="73.216" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FFEBE0" stop-opacity="0.8"/>
+<stop offset="1" stop-color="#DEC6B9" stop-opacity="0.7"/>
+</linearGradient>
+<linearGradient id="paint1_linear_0_101" x1="94.555" y1="-0.0425481" x2="94.555" y2="114.191" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FFF6F6" stop-opacity="0.4"/>
+<stop offset="1" stop-color="#EFDDDD" stop-opacity="0.7"/>
+</linearGradient>
+<path id="stroke0_0_101" d="M5.34294 46.1618C5.34294 31.0529 13.6887 17.1798 27.0365 10.1007C38.9977 3.75702 53.326 3.75702 65.2871 10.1007L83.2696 19.6379C85.7065 20.9303 88.4229 21.6061 91.1813 21.6061H180.856C182.464 21.6061 183.767 22.9095 183.767 24.5174V111.256C183.767 112.877 182.453 114.191 180.832 114.191H8.2778C6.65693 114.191 5.34294 112.877 5.34294 111.256V46.1618Z"/>
+</defs>
+</svg>

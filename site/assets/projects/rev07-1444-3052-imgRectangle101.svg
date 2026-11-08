@@ -1,0 +1,31 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="23.6293" height="8.35305" viewBox="0 0 23.6293 8.35305" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="Rectangle 101">
+<use xlink:href="#stroke0_0_55" fill="black"/>
+<use xlink:href="#stroke0_0_55" fill="url(#paint0_linear_0_55)"/>
+<use xlink:href="#stroke0_0_55" fill="url(#paint1_radial_0_55)"/>
+<mask id="stroke1_0_55" fill="white">
+<use xlink:href="#stroke0_0_55"/>
+</mask>
+<path d="M2.1146 8.35305H21.5147C22.6826 8.35305 23.6293 7.40631 23.6293 6.23845V2.1146C23.6293 0.946739 22.6826 0 21.5147 0H2.1146C0.946739 0 0 0.94674 0 2.1146V6.23845C0 7.40631 0.946741 8.35305 2.1146 8.35305Z" stroke-width="0.21285" stroke="url(#paint2_linear_0_55)" stroke-opacity="0.32" mask="url(#stroke1_0_55)"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_0_55" x1="0.635004" y1="0.754664" x2="7.60772" y2="8.76017" gradientUnits="userSpaceOnUse">
+<stop stop-color="#2A2A2A"/>
+<stop offset="0.341487" stop-color="#393939"/>
+<stop offset="0.509386" stop-color="#403F3F"/>
+<stop offset="1" stop-color="#292929"/>
+</linearGradient>
+<radialGradient id="paint1_radial_0_55" cx="0" cy="0" r="1" gradientTransform="matrix(-0.535565 4.86089 -4.63226 -0.568731 4.50596 3.49098)" gradientUnits="userSpaceOnUse">
+<stop stop-color="#1C1C1C"/>
+<stop offset="1"/>
+</radialGradient>
+<linearGradient id="paint2_linear_0_55" x1="5.23531" y1="-0.158203" x2="2.27988" y2="9.09753" gradientUnits="userSpaceOnUse">
+<stop offset="0.04" stop-color="#7A7A7A"/>
+<stop offset="0.125" stop-color="#3F3F3F"/>
+<stop offset="0.286115" stop-color="#212121"/>
+<stop offset="0.65" stop-color="#171616"/>
+<stop offset="1" stop-color="#737373"/>
+</linearGradient>
+<path id="stroke0_0_55" d="M0 2.1146C0 0.94674 0.946739 0 2.1146 0H21.5147C22.6826 0 23.6293 0.946739 23.6293 2.1146V6.23845C23.6293 7.40631 22.6826 8.35305 21.5147 8.35305H2.1146C0.946741 8.35305 0 7.40631 0 6.23845V2.1146Z"/>
+</defs>
+</svg>

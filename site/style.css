@@ -37,3 +37,6 @@ header{transition:opacity .6s}
 /* Schedule: transparent outline pill. */
 #schedule-open{background:transparent;color:#f4f3e9;border:1px solid currentColor}
 #schedule-open:hover{background:transparent;color:#edc6d1}
+
+/* White native calendar affordance on the translucent Schedule form. */
+#contact-date::-webkit-calendar-picker-indicator{filter:invert(1);opacity:1;cursor:pointer}

@@ -1,0 +1,26 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="195.13" height="125.554" viewBox="0 0 195.13 125.554" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="Rectangle 132" filter="url(#filter0_f_0_38)">
+<use xlink:href="#stroke0_0_38" fill="url(#paint0_linear_0_38)"/>
+<mask id="stroke1_0_38" maskUnits="userSpaceOnUse" x="4.35305" y="3.96756" width="187" height="118" fill="black">
+<rect fill="white" x="4.35305" y="3.96756" width="187" height="118"/>
+<use xlink:href="#stroke0_0_38"/>
+</mask>
+<path d="M30.0466 13.1108C42.0078 6.76713 56.3361 6.76713 68.2972 13.1108L86.2797 22.648C88.7166 23.9404 91.433 24.6162 94.1914 24.6162H183.866C185.474 24.6162 186.777 25.9196 186.777 27.5275V114.266C186.777 115.887 185.463 117.201 183.842 117.201H11.2879C9.66704 117.201 8.35305 115.887 8.35305 114.266V49.1719C8.35305 34.063 16.6988 20.1899 30.0466 13.1108Z" stroke-width="7.67578" stroke="url(#paint1_linear_0_38)" mask="url(#stroke1_0_38)"/>
+</g>
+<defs>
+<filter id="filter0_f_0_38" x="4.76837e-07" y="0" width="195.13" height="125.554" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="2.25758" result="effect1_foregroundBlur_0_38"/>
+</filter>
+<linearGradient id="paint0_linear_0_38" x1="97.5651" y1="2.96756" x2="186.777" y2="76.2261" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FF8F52"/>
+<stop offset="1" stop-color="#FF782F"/>
+</linearGradient>
+<linearGradient id="paint1_linear_0_38" x1="97.5651" y1="2.96756" x2="97.5651" y2="117.201" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FFF6F6" stop-opacity="0.4"/>
+<stop offset="1" stop-color="#EFDDDD" stop-opacity="0.3"/>
+</linearGradient>
+<path id="stroke0_0_38" d="M8.35305 49.1719C8.35305 34.063 16.6988 20.1899 30.0466 13.1108C42.0078 6.76713 56.3361 6.76713 68.2972 13.1108L86.2797 22.648C88.7166 23.9404 91.433 24.6162 94.1914 24.6162H183.866C185.474 24.6162 186.777 25.9196 186.777 27.5275V114.266C186.777 115.887 185.463 117.201 183.842 117.201H11.2879C9.66704 117.201 8.35305 115.887 8.35305 114.266V49.1719Z"/>
+</defs>
+</svg>

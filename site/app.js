@@ -1,4 +1,4 @@
-import {createSections} from './sections.js';
+import {createSections} from './sections.js?v=20261107e';
 import {createEntrance} from './entrance.js';
 import {createCharacters} from './rigged-characters.js';
 import * as THREE from 'three';
@@ -7,7 +7,7 @@ import * as THREE from 'three';
 
 const names=['Background','Experience','Work','Projects','Merch','Mag'];
 const intro='brand & communication specialist, crafting bold and emotionally resonant messages across disciplines.';
-document.querySelector('#categories').innerHTML=names.map((n,i)=>`<button class="category" data-section="${i}"><span>${n}${i>3?' <em>(coming soon)</em>':''}</span><small>${String(i+1).padStart(2,'0')}</small></button>`).join('');
+document.querySelector('#categories').innerHTML=names.map((n,i)=>`<button class="category" data-section="${i}"><span>${n}${i===3?' <em>(In progress)</em>':i>3?' <em>(coming soon)</em>':''}</span><small>${String(i+1).padStart(2,'0')}</small></button>`).join('');
 const dialog=document.querySelector('#search');
 function showInfo(title,copy){document.querySelector('.background-details')?.remove();document.querySelector('#dialog-title').textContent=title;document.querySelector('#dialog-copy').textContent=copy;dialog.showModal()}
 document.querySelector('#search-open').onclick=()=>showInfo('Horacio Soux',intro);

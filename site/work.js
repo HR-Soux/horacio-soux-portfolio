@@ -1,5 +1,5 @@
 import {assetPath} from './asset-paths.js';
-import {createProjects} from './projects.js';
+import {createProjects} from './projects.js?v=20261107e';
 export function createWork({reduced,schedule}){
  const details=createProjects(schedule);
  const projects=[['Optimal','optimal'],['Eden','eden'],['PinnacleBox','pinnacle'],['Casa Obrador','casa'],['Techla','techla'],['Coloso','coloso']];
@@ -12,6 +12,7 @@ export function createWork({reduced,schedule}){
  function resetCurtain(){curtainAnimation?.cancel();curtain.classList.remove('visible');document.body.classList.remove('work-departing');}
 
  const gallery=root.querySelector('.work-gallery'),cards=[...root.querySelectorAll('.work-cover')],caption=root.querySelector('.work-caption');
+ let suppressClick=false;
  let active=false,target=1,position=1,opener=null,drag=null,lastName=-1,request=0;
  const mod=n=>((n%6)+6)%6;
  let preload;
@@ -35,14 +36,15 @@ export function createWork({reduced,schedule}){
  }
  function close(){if(details.active)details.close();request++;resetCurtain();active=false;drag=null;root.inert=true;root.setAttribute('aria-hidden','true');document.body.classList.remove('work-open');document.querySelector('main').inert=false;opener?.focus();}
  function step(n){target=Math.round(target)+n;}
- root.querySelector('.work-back').onclick=close;
+ root.querySelector('.work-back').onclick=()=>{if(!details.active)close();};
  const nav=root.querySelectorAll('.work-navigation button');nav[0].onclick=()=>step(-1);nav[1].onclick=()=>step(1);
  root.addEventListener('wheel',e=>{if(!active||details.active||document.querySelector('dialog[open]'))return;e.preventDefault();target+=Math.max(-1,Math.min(1,(Math.abs(e.deltaX)>Math.abs(e.deltaY)?e.deltaX:e.deltaY)*.003));},{passive:false});
- gallery.addEventListener('pointerdown',e=>{if(e.button!==0)return;drag={x:e.clientX,start:target,moved:false};gallery.setPointerCapture(e.pointerId);gallery.classList.add('dragging');});
+ gallery.addEventListener('pointerdown',e=>{if(e.button!==0)return;suppressClick=false;drag={x:e.clientX,start:target,moved:false,card:e.target.closest('.work-cover')};gallery.setPointerCapture(e.pointerId);gallery.classList.add('dragging');});
  gallery.addEventListener('pointermove',e=>{if(!drag)return;const dx=e.clientX-drag.x;if(Math.abs(dx)>5)drag.moved=true;target=drag.start-dx/Math.max(120,innerWidth*.2);});
- gallery.addEventListener('pointerup',e=>{if(!drag)return;const moved=drag.moved;drag=null;gallery.classList.remove('dragging');if(moved)target=Math.round(target);else{const hit=document.elementFromPoint(e.clientX,e.clientY)?.closest('.work-cover');if(hit){target=Number(hit.dataset.slot);details.open(Number(hit.dataset.project),hit);}}});
- gallery.addEventListener('pointercancel',()=>{drag=null;gallery.classList.remove('dragging');target=Math.round(target);});
- window.addEventListener('keydown',e=>{if(!active||details.active||document.querySelector('dialog[open]'))return;if(e.key==='Escape'){close();return;}if(e.key==='Enter'&&(document.activeElement===gallery||document.activeElement?.classList.contains('work-cover'))){e.preventDefault();const card=cards.find(c=>Number(c.dataset.slot)===Math.round(position));details.open(mod(Math.round(position)),card);return;}if(['ArrowRight','ArrowLeft','ArrowDown','ArrowUp'].includes(e.key)){e.preventDefault();step(['ArrowRight','ArrowDown'].includes(e.key)?1:-1);}});
+ gallery.addEventListener('pointerup',e=>{if(!drag)return;const {moved,card}=drag;drag=null;gallery.classList.remove('dragging');if(gallery.hasPointerCapture(e.pointerId))gallery.releasePointerCapture(e.pointerId);suppressClick=moved;if(moved)target=Math.round(target);else gallery._tapCard=card;});
+ gallery.addEventListener('click',e=>{if(suppressClick){suppressClick=false;gallery._tapCard=null;return;}const hit=e.target.closest('.work-cover')||gallery._tapCard;gallery._tapCard=null;if(hit&&!details.active){target=Number(hit.dataset.slot);details.open(Number(hit.dataset.project),hit);}});
+ gallery.addEventListener('pointercancel',()=>{drag=null;gallery._tapCard=null;suppressClick=true;gallery.classList.remove('dragging');target=Math.round(target);});
+ window.addEventListener('keydown',e=>{if(!active||details.active||document.querySelector('dialog[open]'))return;if(e.key==='Escape'){close();return;}if(e.key==='Enter'&&document.activeElement===gallery){e.preventDefault();const card=cards.find(c=>Number(c.dataset.slot)===Math.round(position));details.open(mod(Math.round(position)),card);return;}if(['ArrowRight','ArrowLeft','ArrowDown','ArrowUp'].includes(e.key)){e.preventDefault();step(['ArrowRight','ArrowDown'].includes(e.key)?1:-1);}});
  document.querySelector('.brand').addEventListener('click',e=>{if(active){e.preventDefault();close();}});
  return {open,close,get active(){return active;},update(dt){if(!active||details.active)return;position=reduced.matches?target:position+(target-position)*(1-Math.exp(-dt*14));if(Math.abs(target-position)<.001)position=target;draw();},replay(){if(!active)return false;target=1;return true;}};
 }

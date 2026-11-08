@@ -1,0 +1,27 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="42.6683" height="27.8435" viewBox="0 0 42.6683 27.8435" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="Rectangle 78">
+<use xlink:href="#stroke0_0_34" fill="black"/>
+<use xlink:href="#stroke0_0_34" fill="url(#paint0_linear_0_34)" fill-opacity="0.5"/>
+<mask id="stroke1_0_34" maskUnits="userSpaceOnUse" x="-0.698989" y="-0.698989" width="44" height="29" fill="black">
+<rect fill="white" x="-0.698989" y="-0.698989" width="44" height="29"/>
+<use xlink:href="#stroke0_0_34"/>
+</mask>
+<path d="M2.50172 27.5425H40.1666C41.382 27.5425 42.3673 26.5572 42.3673 25.3418V2.50172C42.3673 1.2863 41.382 0.301011 40.1666 0.301011H2.50172C1.2863 0.301011 0.301011 1.2863 0.301011 2.50172V25.3418C0.301011 26.5572 1.2863 27.5425 2.50172 27.5425Z" stroke-width="0.602022" stroke="url(#paint1_linear_0_34)" stroke-opacity="0.32" mask="url(#stroke1_0_34)"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_0_34" x1="-1.33826" y1="20.956" x2="41.0096" y2="-4.72542" gradientUnits="userSpaceOnUse">
+<stop stop-color="#1C3B3E"/>
+<stop offset="0.341487" stop-color="#295357"/>
+<stop offset="0.509386" stop-color="#0E2426"/>
+<stop offset="1" stop-color="#3B6F74"/>
+</linearGradient>
+<linearGradient id="paint1_linear_0_34" x1="9.62119" y1="-0.214929" x2="-4.87556" y2="24.5683" gradientUnits="userSpaceOnUse">
+<stop offset="0.04" stop-color="#7A7A7A"/>
+<stop offset="0.125" stop-color="#3F3F3F"/>
+<stop offset="0.286115" stop-color="#212121"/>
+<stop offset="0.65" stop-color="#171616"/>
+<stop offset="1" stop-color="#737373"/>
+</linearGradient>
+<path id="stroke0_0_34" d="M0.301011 2.50172C0.301011 1.2863 1.2863 0.301011 2.50172 0.301011H40.1666C41.382 0.301011 42.3673 1.2863 42.3673 2.50172V25.3418C42.3673 26.5572 41.382 27.5425 40.1666 27.5425H2.50172C1.2863 27.5425 0.301011 26.5572 0.301011 25.3418V2.50172Z"/>
+</defs>
+</svg>
